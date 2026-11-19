@@ -1,0 +1,85 @@
+{
+  "name": "@whiskeysockets/baileys",
+  "version": "1.0.0",
+  "description": "Baileys by ryszox - Ultimate Edition v1.0.0 (150+ Features & No Error)",
+  "keywords": [
+    "baileys",
+    "ryszox",
+    "multi-device",
+    "whatsapp",
+    "telegram"
+  ],
+  "homepage": "https://github.com/Ryszox/baileys",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ryszox/baileys.git"
+  },
+  "license": "MIT",
+  "author": "ryszox (@ryszox_host)",
+  "main": "./lib/index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "default": "./lib/index.js"
+    },
+    "./WAProto": {
+      "import": "./WAProto/index.js",
+      "require": "./WAProto/index.js",
+      "default": "./WAProto/index.js"
+    },
+    "./WAProto/*": "./WAProto/*",
+    "./lib/Socket": "./lib/Socket/index.js",
+    "./lib/Socket/Client": "./lib/Socket/Client/index.js",
+    "./lib/Utils": "./lib/Utils/index.js",
+    "./lib/Store": "./lib/Store/index.js",
+    "./lib/WABinary": "./lib/WABinary/index.js",
+    "./lib/WABinary/Legacy": "./lib/WABinary/Legacy/index.js",
+    "./lib/WAM": "./lib/WAM/index.js",
+    "./lib/WAUSync": "./lib/WAUSync/index.js",
+    "./lib/WAUSync/Protocols": "./lib/WAUSync/Protocols/index.js",
+    "./lib/Types": "./lib/Types/index.js",
+    "./lib/Defaults": "./lib/Defaults/index.js",
+    "./lib/Telegram": "./lib/Telegram/index.js",
+    "./lib/*": [
+      "./lib/*.js",
+      "./lib/*/index.js",
+      "./lib/*"
+    ],
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "WAProto",
+    "index.d.ts",
+    "tsconfig.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node -e \"const b = require('./lib/index.js'); b.printBootBanner(); b.printConnectedBanner({id: '6285136651376@s.whatsapp.net', name: 'ryszox'}); console.log('Ultimate v5 Baileys loaded successfully!');\""
+  },
+  "dependencies": {
+    "baileys-official": "npm:@whiskeysockets/baileys@latest",
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@hapi/boom": "^10.0.1",
+    "axios": "^1.7.7",
+    "cache-manager": "^4.0.1",
+    "curve25519-js": "^0.0.4",
+    "form-data": "^4.0.1",
+    "futoin-hkdf": "^1.5.1",
+    "libphonenumber-js": "^1.10.20",
+    "libsignal": "git+https://github.com/whiskeysockets/libsignal-node.git",
+    "music-metadata": "^7.12.3",
+    "node-cache": "^5.1.2",
+    "pino": "^9.5.0",
+    "protobufjs": "^7.2.5",
+    "qrcode-terminal": "^0.12.0",
+    "telegraf": "^4.16.3",
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
